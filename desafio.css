@@ -5,7 +5,22 @@ body {
     margin: 0;
     padding: 0;
 }
+header{
+    min-height: 150px;
+    text-align:center;
 
+}
+main{
+    text-align: center;
+    min-width: 150px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.267);
+    
+
+}
 .container {
     display: flex;
     flex-direction: column;
