@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('https://framerusercontent.com/images/8G8Y8b1ZHwFvDzVUQQlr4waN1DI.jpg');
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-position: inside; 
+    padding-left: 0; 
+}
+
+ul li {
+    text-align: justify; 
+    margin-bottom: 10px; 
+    padding-left: 20px; 
+    text-indent: -20px; 
+}
+
+p {
+    flex: 1; 
+    text-align: justify; 
+    line-height: 1.6; 
+    margin: 0; 
+}
+
+.container, .container_img, .container2, .container3 {
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    gap: 20px; 
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #a19797;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.imagem img {
+    width: 100%; 
+    height: auto; 
+    max-width: 300px;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.receita {
+    flex: 1; 
+}
+
+.receita h1 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.receita h2 {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.receita ul, .receita ol {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.receita li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.receita p {
+    flex: 1; 
+    text-align: justify; 
+    line-height: 1.6; 
+    margin: 0; 
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+    .container, .container_img, .container2, .container3 {
+        max-width: 600px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container, .container_img, .container2, .container3 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .imagem img {
+        width: 100%;
+        max-width: 150px; /* Ajuste o valor conforme necessário */
+    }
+}
+
+@media (max-width: 480px) {
+    .container, .container_img, .container2, .container3 {
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    .imagem img {
+        width: 100%;
+        max-width: 150px; /* Ajuste o valor conforme necessário */
+    }
+}

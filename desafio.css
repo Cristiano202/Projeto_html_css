@@ -1,88 +1,107 @@
-/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
     background-image: url('https://framerusercontent.com/images/8G8Y8b1ZHwFvDzVUQQlr4waN1DI.jpg');
-    max-width: 100%;
-    overflow-x: hidden; /* Evita rolagem horizontal */
+    background-attachment: fixed;
 }
 
 h1, h2, h3, p {
     text-align: justify;
-    word-wrap: break-word; /* Envolve palavras longas */
+}
+
+section > h2 {
+    text-align: center;
 }
 
 h1 {
     font-family: 'Roboto', sans-serif;
-    text-align: center;
     font-size: 36px;
     font-weight: bold;
-    color: #927c48; 
-    text-transform: uppercase; 
-    margin-bottom: 10px; 
-}
-
-section >h2 {
-    text-align: center;
+    color: #927c48;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 h2 {
-    font-size: 24px; 
-    font-weight: bold; 
-    color: #ffffffc5; 
-    text-transform: uppercase; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffffc5;
+    text-transform: uppercase;
     margin-bottom: 10px;
 }
 
 h3 {
-    font-size: 20px; 
-    font-weight: bold; 
-    color: #777; 
-    text-transform: uppercase; 
-    margin-bottom: 10px; 
+    font-size: 20px;
+    font-weight: bold;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 p {
-    font-size: 16px; 
-    color: #444; 
-    line-height: 1.6; 
-    margin-bottom: 20px; 
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.imagem-estatica {
+    flex: 1;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.imagem-estatica img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo-rolavel {
+    flex: 2;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #fff;
 }
 
 .container {
     display: flex;
-    flex-direction: column; 
-    gap: 20px; 
+    flex-direction: column;
+    gap: 20px;
     padding: 20px;
-    max-width: 800px; 
-    margin: 0 auto; 
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .card {
     display: flex;
-    align-items: center; 
-    gap: 20px; 
-    background-color:  #0a0b0a; 
+    align-items: center;
+    gap: 20px;
+    background-color: #0a0b0a;
     padding: 20px;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
-    width: 150px; 
-    height: 150px; 
-    object-fit: cover; 
-    border-radius: 10px; 
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .texto {
-    flex: 1; 
+    flex: 1;
 }
 
 .texto h2 {
-    margin: 0 0 10px 0; 
+    margin: 0 0 10px 0;
     font-size: 24px;
     color: #333;
 }
@@ -93,109 +112,20 @@ p {
     color: #555;
 }
 
-/* Estilos para o cabeçalho */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #0a0b0a;
-}
-
-header h1 {
-    font-size: 24px;
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #927c48;
-    text-decoration: none;
-}
-
-/* Estilos para os ícones sociais */
-.social-icons {
-    display: flex;
-    align-items: center;
-}
-
-.social-icons a {
-    color: #efebe2;
-    font-size: 24px;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #ffffff;
-}
-
-/* Media Queries para Responsividade */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero-text, .content, .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-    }
-}
-
-@media (max-width: 600px) {
-    .texto {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .texto img {
-        width: 100%;
-        height: auto;
-    }
-    
     .container {
-        padding: 10px;
+        flex-direction: column;
     }
 
-    header {
-        padding: 10px;
+    .imagem-estatica {
+        height: 200px;
     }
 
-    nav ul {
-        padding: 0;
+    .conteudo-rolavel {
+        overflow-y: visible;
     }
 
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .social-icons a {
-        font-size: 20px;
-        margin: 0 5px;
+    .card img {
+        max-width: 100px; /* Ajuste o valor conforme necessário */
     }
 }
