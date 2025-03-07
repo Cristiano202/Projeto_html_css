@@ -1,73 +1,201 @@
+/* Estilos gerais */
 body {
-    background-color: #121212;
-    color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    background-image: url('https://framerusercontent.com/images/8G8Y8b1ZHwFvDzVUQQlr4waN1DI.jpg');
+    max-width: 100%;
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
-header{
-    min-height: 150px;
-    text-align:center;
 
+h1, h2, h3, p {
+    text-align: justify;
+    word-wrap: break-word; /* Envolve palavras longas */
 }
-main{
+
+h1 {
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-    min-width: 150px;
-    max-width: 1000px;
-    padding: 20px;
-    margin: auto;
-    margin-bottom: 30px;
-    box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.267);
-    
-
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 90%;
-    margin: auto;
-    padding: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #927c48; 
+    text-transform: uppercase; 
+    margin-bottom: 10px; 
 }
 
-.text {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: #1e1e1e;
-    padding: 15px;
-    border-radius: 10px;
-    flex-wrap: wrap;
+section >h2 {
+    text-align: center;
 }
 
-.text img {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.text div {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+h2 {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #ffffffc5; 
+    text-transform: uppercase; 
+    margin-bottom: 10px;
 }
 
 h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 5px;
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #777; 
+    text-transform: uppercase; 
+    margin-bottom: 10px; 
+}
+
+p {
+    font-size: 16px; 
+    color: #444; 
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    padding: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.card {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    background-color:  #0a0b0a; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.card img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+.texto {
+    flex: 1; 
+}
+
+.texto h2 {
+    margin: 0 0 10px 0; 
+    font-size: 24px;
+    color: #333;
+}
+
+.texto p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0a0b0a;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #927c48;
+    text-decoration: none;
+}
+
+/* Estilos para os ícones sociais */
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #efebe2;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-text, .content, .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
 }
 
 @media (max-width: 600px) {
-    .text {
+    .texto {
         flex-direction: column;
         align-items: flex-start;
     }
-    .text img {
+    
+    .texto img {
         width: 100%;
         height: auto;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin: 0 5px;
     }
 }
